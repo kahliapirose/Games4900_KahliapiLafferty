@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b5dpb14u7bbrd"]
+
+[ext_resource type="PackedScene" uid="uid://dffgkn1phdg3f" path="res://AddOns/Models/FBX format/crypt.fbx" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b5nhqlobcrs3r" path="res://AddOns/Models/FBX format/crypt-large.fbx" id="2_kek77"]
+[ext_resource type="PackedScene" uid="uid://dvpkbv683w845" path="res://AddOns/Models/FBX format/crypt-small-roof.fbx" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://b76v0egk5kir5" path="res://AddOns/Models/FBX format/candle-multiple.fbx" id="4_4c57u"]
+[ext_resource type="PackedScene" uid="uid://bhtk35jljkkob" path="res://Scenes/Grave Group.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://crls6y0cl8ebh" path="res://AddOns/Models/FBX format/crypt-small.fbx" id="5_efxa6"]
+[ext_resource type="PackedScene" uid="uid://vi55q2w4t4ce" path="res://AddOns/Models/FBX format/debris-wood.fbx" id="7_dg77c"]
+[ext_resource type="PackedScene" uid="uid://cijhrq1t7j8ss" path="res://AddOns/Models/FBX format/coffin.fbx" id="8_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://worfp61xirxu" path="res://AddOns/Models/FBX format/lightpost-single.fbx" id="9_w48qg"]
+
+[node name="Main" type="Node3D" unique_id=1528846040]
+
+[node name="crypt-small-roof" parent="." unique_id=1993739046 instance=ExtResource("2_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.275539, 0.88862884, -0.76244366)
+
+[node name="crypt-large" parent="crypt-small-roof" unique_id=683411949 instance=ExtResource("2_kek77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00600338, -0.88862884, -0.2256316)
+
+[node name="GraveGroup" parent="." unique_id=599328392 instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.118399, 0.3967346, -0.36764288)
+
+[node name="GraveGroup2" parent="." unique_id=1387416417 instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.118399, 0.3967346, -1.3277372)
+
+[node name="GraveGroup3" parent="." unique_id=813847148 instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.118399, 0.3967346, -2.4819427)
+
+[node name="candle-multiple" parent="." unique_id=1928596901 instance=ExtResource("4_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0605803, 0.31400275, 0.58340144)
+
+[node name="candle-multiple2" parent="." unique_id=1687768873 instance=ExtResource("4_4c57u")]
+transform = Transform3D(0.93195724, 0, -0.36256817, 0, 1, 0, 0.36256817, 0, 0.93195724, 2.8008037, 0.31400287, 0.6615187)
+
+[node name="candle-multiple3" parent="." unique_id=319931436 instance=ExtResource("4_4c57u")]
+transform = Transform3D(0.9347265, 0, 0.35536802, 0, 1, 0, -0.35536802, 0, 0.9347265, 3.4939234, 0.31400275, 0.7303732)
+
+[node name="candle-multiple4" parent="." unique_id=1593488407 instance=ExtResource("4_4c57u")]
+transform = Transform3D(0.9999703, 0, -0.007714331, 0, 1, 0, 0.007714331, 0, 0.9999703, 4.2135906, 0.31400287, 0.54033965)
+
+[node name="crypt-small" parent="." unique_id=422628482 instance=ExtResource("5_efxa6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7720685, 0, -0.58321)
+
+[node name="crypt" parent="crypt-small" unique_id=2108312286 instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005084038, 0.9155972, -0.10046387)
+
+[node name="debris-wood" parent="." unique_id=1470284147 instance=ExtResource("7_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6288176, 0, -0.5241344)
+
+[node name="coffin" parent="." unique_id=1190542689 instance=ExtResource("8_ycdy4")]
+transform = Transform3D(0.41494992, -0.60397774, -0.36926636, 0, 0.6225395, -0.5314281, 0.59683454, 0.41991618, 0.25673288, 0.07522601, 0.24643302, -0.4858595)
+
+[node name="debris-wood2" parent="." unique_id=1687116911 instance=ExtResource("7_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11339438, 0.060136437, -0.9404404)
+
+[node name="lightpost-single" parent="." unique_id=207602938 instance=ExtResource("9_w48qg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9494917, 0, -0.07748079)
+
+[node name="lightpost-single2" parent="." unique_id=1191485243 instance=ExtResource("9_w48qg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.641985, 0, -0.07748079)

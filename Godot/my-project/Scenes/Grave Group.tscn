@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bhtk35jljkkob"]
+
+[ext_resource type="PackedScene" uid="uid://cirt0pk10okwc" path="res://AddOns/Models/FBX format/gravestone-bevel.fbx" id="1_p7f2k"]
+[ext_resource type="PackedScene" uid="uid://d1v04ioq0da61" path="res://AddOns/Models/FBX format/gravestone-cross.fbx" id="2_pggtu"]
+[ext_resource type="PackedScene" uid="uid://bom3tgh33hkvj" path="res://AddOns/Models/FBX format/gravestone-roof.fbx" id="3_ya30h"]
+
+[node name="GraveGroup" type="Node3D" unique_id=599328392]
+
+[node name="gravestone-bevel" parent="." unique_id=1941451072 instance=ExtResource("1_p7f2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63007987, 0, 0.8689897)
+
+[node name="gravestone-cross" parent="gravestone-bevel" unique_id=1438716978 instance=ExtResource("2_pggtu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6997236, 0, 0.0064247847)
+
+[node name="gravestone-roof" parent="gravestone-bevel/gravestone-cross" unique_id=1683857388 instance=ExtResource("3_ya30h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6484175, 0, 0)
