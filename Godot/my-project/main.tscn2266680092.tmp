@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://vi55q2w4t4ce" path="res://AddOns/Models/FBX format/debris-wood.fbx" id="7_dg77c"]
 [ext_resource type="PackedScene" uid="uid://cijhrq1t7j8ss" path="res://AddOns/Models/FBX format/coffin.fbx" id="8_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://worfp61xirxu" path="res://AddOns/Models/FBX format/lightpost-single.fbx" id="9_w48qg"]
-[ext_resource type="PackedScene" uid="uid://dxb7e1olmf2kd" path="res://Scenes/Caller.tscn" id="11_dg77c"]
-[ext_resource type="PackedScene" uid="uid://ca4liws3ywgdq" path="res://Scenes/Receiver.tscn" id="11_efxa6"]
 
 [node name="Main" type="Node3D" unique_id=1528846040]
 
@@ -61,9 +59,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9494917, 0, -0.07748079)
 
 [node name="lightpost-single2" parent="." unique_id=1191485243 instance=ExtResource("9_w48qg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.641985, 0, -0.07748079)
-
-[node name="Caller" parent="." unique_id=423922765 node_paths=PackedStringArray("receiver") instance=ExtResource("11_dg77c")]
-transform = Transform3D(0.9999703, 0, -0.007714331, 0, 1, 0, 0.007714331, 0, 0.9999703, 4.2135906, 0.31400287, 0.54033965)
-receiver = NodePath("../Receiver")
-
-[node name="Receiver" parent="." unique_id=559341969 instance=ExtResource("11_efxa6")]

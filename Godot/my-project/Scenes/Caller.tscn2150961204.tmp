@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dxb7e1olmf2kd"]
+
+[ext_resource type="Script" uid="uid://clb1jr20e78gt" path="res://Scenes/Caller.gd" id="1_lldwi"]
+
+[node name="Caller" type="Node3D" unique_id=423922765]
+script = ExtResource("1_lldwi")

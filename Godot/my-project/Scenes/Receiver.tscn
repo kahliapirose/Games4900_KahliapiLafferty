@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ca4liws3ywgdq"]
+
+[ext_resource type="Script" uid="uid://bl47d3odh763q" path="res://Scenes/Receiver.gd" id="1_o1ne3"]
+[ext_resource type="PackedScene" uid="uid://c1rdwud0ejhnq" path="res://AddOns/Models/FBX format/pumpkin-tall-carved.fbx" id="2_h0f1i"]
+
+[node name="Receiver" type="Node3D" unique_id=559341969]
+script = ExtResource("1_o1ne3")
+
+[node name="pumpkin-tall-carved" parent="." unique_id=50799599 instance=ExtResource("2_h0f1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27395225, 0, 0.4498825)
