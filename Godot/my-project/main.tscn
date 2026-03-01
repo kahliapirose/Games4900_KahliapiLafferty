@@ -11,6 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://worfp61xirxu" path="res://AddOns/Models/FBX format/lightpost-single.fbx" id="9_w48qg"]
 [ext_resource type="PackedScene" uid="uid://dxb7e1olmf2kd" path="res://Scenes/Caller.tscn" id="11_dg77c"]
 [ext_resource type="PackedScene" uid="uid://ca4liws3ywgdq" path="res://Scenes/Receiver.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://AddOns/proto_controller/proto_controller.tscn" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://btbx4r2gefqx8" path="res://coin_collector.gd" id="13_ycdy4"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_dg77c"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dg77c"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_w48qg"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vivmo"]
 
 [node name="Main" type="Node3D" unique_id=1528846040]
 
@@ -67,3 +77,25 @@ transform = Transform3D(0.9999703, 0, -0.007714331, 0, 1, 0, 0.007714331, 0, 0.9
 receiver = NodePath("../Receiver")
 
 [node name="Receiver" parent="." unique_id=559341969 instance=ExtResource("11_efxa6")]
+
+[node name="ProtoController" parent="." unique_id=1068668792 groups=["Player"] instance=ExtResource("12_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.785815, -0.14567852, 3.3781543)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=98582906]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1675138530]
+shape = SubResource("WorldBoundaryShape3D_dg77c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/CollisionShape3D" unique_id=858656951]
+transform = Transform3D(20.304857, 0, 0, 0, 1.0057081, 0, 0, 0, 19.166155, 0, -0.70976615, 0)
+mesh = SubResource("BoxMesh_dg77c")
+
+[node name="CoinCollector" type="Area3D" parent="." unique_id=199080358]
+script = ExtResource("13_ycdy4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CoinCollector" unique_id=1102033865]
+transform = Transform3D(1.9106855e-15, 4.826316e-09, 1, 1, -4.826316e-09, 0, 4.371139e-08, 0.11041323, -4.371139e-08, 2.8269682, 0.7593801, 1.0497401)
+shape = SubResource("CylinderShape3D_w48qg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CoinCollector/CollisionShape3D" unique_id=1834180271]
+mesh = SubResource("CylinderMesh_vivmo")
